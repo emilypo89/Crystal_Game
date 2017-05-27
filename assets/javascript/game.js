@@ -6,6 +6,14 @@ $(document).ready(function(){
 var userGuessArray = [];
 var numberEntered = false;
 var userTotal = 0;
+var wins = 0;
+var losses = 0;
+
+var updateWins = '<p>Wins: ' + wins +'</p>';
+var updateLosses = '<p>Losses: ' + losses +'</p>';
+$("#scoreStats").html(updateWins + updateLosses);
+
+
 var computerGuess = Math.floor((Math.random() * 120) + 19);
 	$("#computerGuess").html(computerGuess);
 	console.log(computerGuess);
@@ -14,7 +22,7 @@ var computerGuess = Math.floor((Math.random() * 120) + 19);
 
 $(".crystalImages").on("click", function() {
       
-    var randomValue = (Math.floor(Math.random()*13)+1);
+    var randomValue = Math.floor((Math.random() * 12) + 1);
     $("#userGuess").html(randomValue);
     console.log(randomValue);
 
@@ -31,14 +39,15 @@ $(".crystalImages").on("click", function() {
    		console.log(userGuessArray);
    		console.log(userTotal);
 
-   		if (userTotal === computerGuess);
+   		if (userTotal === computerGuess){
    			wins++;
    			reset();
+		}
    		
-   		if (userTotal > computerGuess);
+   		if (userTotal > computerGuess){
    			losses++;
    			reset();
-
+   		}
       });
 
 	// if (numberEntered === true){
@@ -49,12 +58,11 @@ $(".crystalImages").on("click", function() {
  //    			console.log(addedValue);
  //       		}
 
-
-
-// add the random numbers together
-      function addValue() {
-      	var addedValue = randomValue + randomValue2;
-      }
+function reset () {
+	userGuessArray = [];
+	numberEntered = false;
+	userTotal = 0;
+}
 
 
 
