@@ -4,69 +4,56 @@
 $(document).ready(function(){
 
 var userGuessArray = [];
-var boolean = false;
+var numberEntered = false;
+var userTotal = 0;
 var computerGuess = Math.floor((Math.random() * 120) + 19);
 	$("#computerGuess").html(computerGuess);
 	console.log(computerGuess);
 
 // generate random number on button click of crystal images
 
-     
-      $("crystal1").on("click", function() {
+$(".crystalImages").on("click", function() {
       
-        var randomValue = (Math.floor(Math.random()*13)+1);
-       $("#userGuess").html(randomValue);
-       console.log(randomValue);
+    var randomValue = (Math.floor(Math.random()*13)+1);
+    $("#userGuess").html(randomValue);
+    console.log(randomValue);
 
-       		// var crystal1guess = parsInt(randomValue);
-       		// if (randomValue === guess1){
+       	var guess1 = parseInt(randomValue);
+       		if (randomValue === guess1){
+       			userGuessArray.push(randomValue);
+       			numberEntered = true;
+       			for (var i = 0; i < userGuessArray.length; i++) {
+   					userTotal += userGuessArray[i] << 0;
+				$("#userGuess").html(userTotal);
+				}
+       		}
 
-       		// }
+   		console.log(userGuessArray);
+   		console.log(userTotal);
+
+   		if (userTotal === computerGuess);
+   			wins++;
+   			reset();
+   		
+   		if (userTotal > computerGuess);
+   			losses++;
+   			reset();
 
       });
 
-       $("crystal1").on("click", function() {
-      
-        var randomValue = (Math.floor(Math.random()*13)+1);
-       $("#userGuess").html(randomValue);
-       console.log(randomValue);
+	// if (numberEntered === true){
+ //       			var randomValue2 = (Math.floor(Math.random()*13)+1);
+ //       			addedValue();
+ //       			numberEntered = false;
+ //    			$("#userGuess").html(addedValue);
+ //    			console.log(addedValue);
+ //       		}
 
-       		// var crystal1guess = parsInt(randomValue);
-       		// if (randomValue === guess1){
 
-       		// }
-
-      });
-
-       $("crystal1").on("click", function() {
-      
-        var randomValue = (Math.floor(Math.random()*13)+1);
-       $("#userGuess").html(randomValue);
-       console.log(randomValue);
-
-       		// var crystal1guess = parsInt(randomValue);
-       		// if (randomValue === guess1){
-
-       		// }
-
-      });
-
-        $("crystal1").on("click", function() {
-      
-        var randomValue = (Math.floor(Math.random()*13)+1);
-       $("#userGuess").html(randomValue);
-       console.log(randomValue);
-
-       		// var crystal1guess = parsInt(randomValue);
-       		// if (randomValue === guess1){
-
-       		// }
-
-      });
 
 // add the random numbers together
-      function addValue(randomValue) {
-
+      function addValue() {
+      	var addedValue = randomValue + randomValue2;
       }
 
 
