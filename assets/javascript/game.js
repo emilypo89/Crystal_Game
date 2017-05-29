@@ -13,10 +13,12 @@ var updateWins = '<p>Wins: ' + wins +'</p>';
 var updateLosses = '<p>Losses: ' + losses +'</p>';
 $("#scoreStats").html(updateWins + updateLosses);
 
+// first click 
 
-var computerGuess = Math.floor((Math.random() * 120) + 19);
-	$("#computerGuess").html(computerGuess);
-	console.log(computerGuess);
+// computer generates a number
+	var computerGuess = Math.floor((Math.random() * 120) + 1);
+		$("#computerGuess").html(computerGuess);
+		console.log(computerGuess);
 
 // generate random number on button click of crystal images
 
@@ -26,15 +28,29 @@ $(".crystalImages").on("click", function() {
     $("#userGuess").html(randomValue);
     console.log(randomValue);
 
-       	var guess1 = parseInt(randomValue);
-       		if (randomValue === guess1){
-       			userGuessArray.push(randomValue);
-       			numberEntered = true;
-       			for (var i = 0; i < userGuessArray.length; i++) {
-   					userTotal += userGuessArray[i] << 0;
-				$("#userGuess").html(userTotal);
-				}
-       		}
+
+    // turn randomValue into an integer
+    // push that value into the userGuessArray
+	var guess1 = parseInt(randomValue);
+		if (randomValue == guess1){
+			userGuessArray.push(guess1);
+			numberEntered = true;
+		}
+
+		function secondClicks() {
+			if (numberEntered == true) {
+				$(".crystalImages").on("click", function (){
+					randomValue = guess1;
+				})
+			}
+		}
+	secondClicks ();
+
+	// add the integers in the userGuessArray together
+		for (var i = 0; i < userGuessArray.length; i++) {
+   			userTotal += userGuessArray[i] << 0;
+			$("#userGuess").html(userTotal);
+       	}
 
    		console.log(userGuessArray);
    		console.log(userTotal);
@@ -48,15 +64,13 @@ $(".crystalImages").on("click", function() {
    			losses++;
    			reset();
    		}
-      });
+		
+})
 
-	// if (numberEntered === true){
- //       			var randomValue2 = (Math.floor(Math.random()*13)+1);
- //       			addedValue();
- //       			numberEntered = false;
- //    			$("#userGuess").html(addedValue);
- //    			console.log(addedValue);
- //       		}
+		
+
+
+
 
 function reset () {
 	userGuessArray = [];
