@@ -50,12 +50,52 @@ var generatedNumber4 = parseInt(crystalValue4);
 
 if (numberGenerated == false) {
 	numberGeneration();
+	console.log(generatedImageNumberArray);
 	numberGenerated = true;
+	alert (numberGenerated);
 }
 
-else {
-	addNumbers();
+if (numberGenerated = true) {
+	// addNumbers();
+	alert("add some numbers");
+		$("#crystal1").on("click", function() {
+				userTotal = userTotal + generatedImageNumberArray[0];
+				userInputArray.push(generatedImageNumberArray[0]);
+				// $("#userGuess").html(userTotal);
+			});
+
+			$("#crystal2").on("click", function() {
+				userTotal = userTotal + generatedImageNumberArray[1];
+				userInputArray.push(generatedImageNumberArray[1]);
+				// $("#userGuess").html(userTotal);
+			});
+
+			$("#crystal3").on("click", function() {
+				userTotal = userTotal + generatedImageNumberArray[2];
+				userInputArray.push(generatedImageNumberArray[2]);
+				// $("#userGuess").html(userTotal);
+			});
+
+			$("#crystal4").on("click", function() {
+				userTotal = userTotal + generatedImageNumberArray[3];
+				userInputArray.push(generatedImageNumberArray[3]);
+				// $("#userGuess").html(userTotal);
+			});
+			
+			console.log(userTotal);
+
+			// for (var i = 0; i < userInputArray.length; i++) {
+			//    			userTotal += userInputArray[i] << 0;
+			// }
+
+			$("#userTotal").html(userTotal);
+
 }
+
+
+
+
+
 // generate random number on button click of crystal images
 function numberGeneration () {
 	if (numberGenerated == false){
@@ -109,51 +149,57 @@ function numberGeneration () {
 		// numberGenerated = true;
 
 	}
-
-	function addNumbers() {
-		$("#crystal1").on("click", function() {
-			// userTotal = userTotal + generatedImageNumberArray[0];
-			userInputArray.push(generatedImageNumberArray[0]);
-			// $("#userGuess").html(userTotal);
-		});
-
-		$("#crystal2").on("click", function() {
-			// userTotal = userTotal + generatedImageNumberArray[1];
-			userInputArray.push(generatedImageNumberArray[1]);
-			// $("#userGuess").html(userTotal);
-		});
-
-		$("#crystal3").on("click", function() {
-			// userTotal = userTotal + generatedImageNumberArray[2];
-			userInputArray.push(generatedImageNumberArray[2]);
-			// $("#userGuess").html(userTotal);
-		});
-
-		$("#crystal4").on("click", function() {
-			// userTotal = userTotal + generatedImageNumberArray[3];
-			userInputArray.push(generatedImageNumberArray[3]);
-			// $("#userGuess").html(userTotal);
-		});
-
-		// $("#userGuess").html(userTotal);
+}	
 
 
-}
+
+
+		// if (numberGenerated == true) {
+		// 		// alert("I'm working!");
+		// 	$("#crystal1").on("click", function() {
+		// 		// userTotal = userTotal + generatedImageNumberArray[0];
+		// 		userInputArray.push(generatedImageNumberArray[0]);
+		// 		// $("#userGuess").html(userTotal);
+		// 	});
+
+		// 	$("#crystal2").on("click", function() {
+		// 		// userTotal = userTotal + generatedImageNumberArray[1];
+		// 		userInputArray.push(generatedImageNumberArray[1]);
+		// 		// $("#userGuess").html(userTotal);
+		// 	});
+
+		// 	$("#crystal3").on("click", function() {
+		// 		// userTotal = userTotal + generatedImageNumberArray[2];
+		// 		userInputArray.push(generatedImageNumberArray[2]);
+		// 		// $("#userGuess").html(userTotal);
+		// 	});
+
+		// 	$("#crystal4").on("click", function() {
+		// 		// userTotal = userTotal + generatedImageNumberArray[3];
+		// 		userInputArray.push(generatedImageNumberArray[3]);
+		// 		// $("#userGuess").html(userTotal);
+		// 	});
+
+		// $("#userTotal").html(userTotal);
+
+
+
+// }
 
 // addNumbers();
 
-console.log(userTotal);
-}
+// console.log(userTotal);
+// }
 
-for (var i = 0; i < generatedImageNumberArray.length; i++) {
-   			// userOptions += generatedImageNumberArray[i] << 0;
-			// $("#userGuess").html(userOptions);
-       	}
+// // for (var i = 0; i < generatedImageNumberArray.length; i++) {
+// //    			// userOptions += generatedImageNumberArray[i] << 0;
+// // 			// $("#userGuess").html(userOptions);
+// //        	}
 
-for (var i = 0; i < userInputArray.length; i++) {
-   			userTotal += userInputArray[i] << 0;
-			$("#userGuess").html(userTotal);
-       	}
+// for (var i = 0; i < userInputArray.length; i++) {
+//    			userTotal += userInputArray[i] << 0;
+// 			$("#userTotal").html(userTotal);
+//        	}
 		   // turn randomValue into an integer
     // push that value into the generatedImageNumberArray
 
@@ -166,7 +212,7 @@ for (var i = 0; i < userInputArray.length; i++) {
 	// numberGeneration();
 
 
-   		console.log(generatedImageNumberArray);
+   		
    		// console.log(userTotal);
 
 // function addNumbers() {
