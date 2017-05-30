@@ -120,13 +120,7 @@ var crystalValue4 = Math.floor((Math.random() * 12) + 1);
 	    	}
 		});	
 
-
-   		
-// var updateWins = '<p>Wins: ' + wins +'</p>';
-// var updateLosses = '<p>Losses: ' + losses +'</p>';
-// $("#scoreStats").html(updateWins + updateLosses);
-
-	
+// reset function 
 function reset () {
 	userTotal = 0;
 	var computerGuess = Math.floor((Math.random() * 120) + 1);
