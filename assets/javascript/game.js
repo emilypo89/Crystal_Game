@@ -3,9 +3,11 @@
 
 $(document).ready(function(){
 
-var userGuessArray = [];
+var generatedImageNumberArray = [];
+var	userInputArray = [];
 var numberGenerated = false;
 var userTotal = 0;
+var userOptions = 0;
 var wins = 0;
 var losses = 0;
 
@@ -19,22 +21,10 @@ var crystalValue3 = Math.floor((Math.random() * 12) + 1);
 var crystalValue4 = Math.floor((Math.random() * 12) + 1);
 
 var generatedNumber1 = parseInt(crystalValue1);
+var generatedNumber2 = parseInt(crystalValue2);
+var generatedNumber3 = parseInt(crystalValue3);
+var generatedNumber4 = parseInt(crystalValue4);
 		
-
-	var guess2 = parseInt(crystalValue2);
-		if (crystalValue2 == guess2){
-			userGuessArray.push(guess2);
-		}
-
-	var guess3 = parseInt(crystalValue3);
-		if (crystalValue3 == guess3){
-			userGuessArray.push(guess2);
-		}
-
-	var guess4 = parseInt(crystalValue4);
-		if (crystalValue4 == guess4){
-			userGuessArray.push(guess4);
-		}
 
 // first click 
 
@@ -58,6 +48,14 @@ var generatedNumber1 = parseInt(crystalValue1);
 	// 		}
 	// 	}
 
+if (numberGenerated == false) {
+	numberGeneration();
+	numberGenerated = true;
+}
+
+else {
+	addNumbers();
+}
 // generate random number on button click of crystal images
 function numberGeneration () {
 	if (numberGenerated == false){
@@ -69,9 +67,9 @@ function numberGeneration () {
 	    // numberGenerated = true;
 		});	
 
-		if (crystalValue1 == generatedNumber1){
-			userGuessArray.push(generatedNumber1);
-		}
+			if (crystalValue1 == generatedNumber1){
+				generatedImageNumberArray.push(generatedNumber1);
+			}
 
 		$("#crystal2").on("click", function() {
 	      
@@ -81,6 +79,10 @@ function numberGeneration () {
 	    // numberGenerated = true;
 		});	
 
+			if (crystalValue2 == generatedNumber2){
+				generatedImageNumberArray.push(generatedNumber2);
+			}
+
 		$("#crystal3").on("click", function() {
 	      
 	    // var randomValue = Math.floor((Math.random() * 12) + 1);
@@ -89,6 +91,10 @@ function numberGeneration () {
 	    // numberGenerated = true;
 		});	
 
+			if (crystalValue3 == generatedNumber3){
+				generatedImageNumberArray.push(generatedNumber3);
+			}
+
 		$("#crystal4").on("click", function() {
 	      
 	    // var randomValue = Math.floor((Math.random() * 12) + 1);
@@ -96,57 +102,102 @@ function numberGeneration () {
 	    console.log(crystalValue4);
 		});	
 
-		numberGenerated = true;
+			if (crystalValue4 == generatedNumber4){
+				generatedImageNumberArray.push(generatedNumber4);
+			}
+
+		// numberGenerated = true;
+
+	}
+
+	function addNumbers() {
+		$("#crystal1").on("click", function() {
+			// userTotal = userTotal + generatedImageNumberArray[0];
+			userInputArray.push(generatedImageNumberArray[0]);
+			// $("#userGuess").html(userTotal);
+		});
+
+		$("#crystal2").on("click", function() {
+			// userTotal = userTotal + generatedImageNumberArray[1];
+			userInputArray.push(generatedImageNumberArray[1]);
+			// $("#userGuess").html(userTotal);
+		});
+
+		$("#crystal3").on("click", function() {
+			// userTotal = userTotal + generatedImageNumberArray[2];
+			userInputArray.push(generatedImageNumberArray[2]);
+			// $("#userGuess").html(userTotal);
+		});
+
+		$("#crystal4").on("click", function() {
+			// userTotal = userTotal + generatedImageNumberArray[3];
+			userInputArray.push(generatedImageNumberArray[3]);
+			// $("#userGuess").html(userTotal);
+		});
+
+		// $("#userGuess").html(userTotal);
+
+
 }
 
-		   // turn randomValue into an integer
-    // push that value into the userGuessArray
-	var guess1 = parseInt(crystalValue1);
-		if (crystalValue1 == guess1){
-			userGuessArray.push(guess1);
-		}
+// addNumbers();
 
-	var guess2 = parseInt(crystalValue2);
-		if (crystalValue2 == guess2){
-			userGuessArray.push(guess2);
-		}
+console.log(userTotal);
+}
 
-	var guess3 = parseInt(crystalValue3);
-		if (crystalValue3 == guess3){
-			userGuessArray.push(guess2);
-		}
-
-	var guess4 = parseInt(crystalValue4);
-		if (crystalValue4 == guess4){
-			userGuessArray.push(guess4);
-		}
-
-// add the integers in the userGuessArray together
-		for (var i = 0; i < userGuessArray.length; i++) {
-   			userTotal += userGuessArray[i] << 0;
-			$("#userGuess").html(userTotal);
+for (var i = 0; i < generatedImageNumberArray.length; i++) {
+   			// userOptions += generatedImageNumberArray[i] << 0;
+			// $("#userGuess").html(userOptions);
        	}
 
-}
+for (var i = 0; i < userInputArray.length; i++) {
+   			userTotal += userInputArray[i] << 0;
+			$("#userGuess").html(userTotal);
+       	}
+		   // turn randomValue into an integer
+    // push that value into the generatedImageNumberArray
 
-	numberGeneration();
+
+// add the integers in the userGuessArray together
+		
+
+// }
+
+	// numberGeneration();
 
 
-   		console.log(userGuessArray);
-   		console.log(userTotal);
+   		console.log(generatedImageNumberArray);
+   		// console.log(userTotal);
 
+// function addNumbers() {
+// 		$("#crystal1").on("click", function() {
+// 			userTotal = userTotal + generatedImageNumberArray[0];
+// 			// $("#userGuess").html(userTotal);
+// 		});
 
- 
- 
-	// 	function secondClicks() {
-	// 		if (numberEntered == true) {
-	// 			$(".crystalImages").on("click", function (){
-	// 				randomValue = guess1;
-	// 			})
-	// 		}
-	// 	}
-	// secondClicks ();
+// 		$("#crystal2").on("click", function() {
+// 			userTotal = userTotal + generatedImageNumberArray[1];
+// 			// $("#userGuess").html(userTotal);
+// 		});
 
+// 		$("#crystal3").on("click", function() {
+// 			userTotal = userTotal + generatedImageNumberArray[2];
+// 			// $("#userGuess").html(userTotal);
+// 		});
+
+// 		$("#crystal4").on("click", function() {
+// 			userTotal = userTotal + generatedImageNumberArray[3];
+// 			// $("#userGuess").html(userTotal);
+// 		});
+
+// 		$("#userGuess").html(userTotal);
+
+// 		$("#userGuess").html("reached the total part");
+// }
+
+// // addNumbers();
+
+// console.log(userTotal);
 	
 
    		if (userTotal === computerGuess){
@@ -158,30 +209,14 @@ function numberGeneration () {
    			losses++;
    			reset();
    		}
-		
-// });
-
-		
 
 
-
-
+	
 function reset () {
 	userGuessArray = [];
 	numberEntered = false;
 	userTotal = 0;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
