@@ -1,0 +1,29 @@
+.jumbotron {
+	background-color: #FF7577;
+	font-family: 'Metamorphous', cursive;
+	color: black;
+	border-bottom: solid 5px black;
+}
+
+li {
+	font-size: 12px;
+}
+
+.panel-heading {
+	background-color: #FF7577;
+}
+
+.panel-title{
+	font-family: 'Metamorphous', cursive;
+}
+
+.panel-body {
+	font-family: 'Metamorphous', cursive;
+}
+
+#footer {
+	background-color: #FF7577;
+	border-top: solid 5px black;
+	text-align: center;
+	font-family: 'Metamorphous', cursive;
+}
