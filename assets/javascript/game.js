@@ -56,40 +56,8 @@ if (numberGenerated == false) {
 }
 
 if (numberGenerated = true) {
-	// addNumbers();
+	addNumbers();
 	alert("add some numbers");
-		$("#crystal1").on("click", function() {
-				userTotal = userTotal + generatedImageNumberArray[0];
-				userInputArray.push(generatedImageNumberArray[0]);
-				// $("#userGuess").html(userTotal);
-			});
-
-			$("#crystal2").on("click", function() {
-				userTotal = userTotal + generatedImageNumberArray[1];
-				userInputArray.push(generatedImageNumberArray[1]);
-				// $("#userGuess").html(userTotal);
-			});
-
-			$("#crystal3").on("click", function() {
-				userTotal = userTotal + generatedImageNumberArray[2];
-				userInputArray.push(generatedImageNumberArray[2]);
-				// $("#userGuess").html(userTotal);
-			});
-
-			$("#crystal4").on("click", function() {
-				userTotal = userTotal + generatedImageNumberArray[3];
-				userInputArray.push(generatedImageNumberArray[3]);
-				// $("#userGuess").html(userTotal);
-			});
-			
-			console.log(userTotal);
-
-			// for (var i = 0; i < userInputArray.length; i++) {
-			//    			userTotal += userInputArray[i] << 0;
-			// }
-
-			$("#userTotal").html(userTotal);
-
 }
 
 
@@ -100,11 +68,8 @@ if (numberGenerated = true) {
 function numberGeneration () {
 	if (numberGenerated == false){
 		$("#crystal1").on("click", function() {
-	      
-	    // var randomValue = Math.floor((Math.random() * 12) + 1);
-	    $("#userGuess").html(crystalValue1);
+	    // $("#userGuess").html(crystalValue1);
 	    console.log(crystalValue1);
-	    // numberGenerated = true;
 		});	
 
 			if (crystalValue1 == generatedNumber1){
@@ -112,11 +77,8 @@ function numberGeneration () {
 			}
 
 		$("#crystal2").on("click", function() {
-	      
-	    // var randomValue = Math.floor((Math.random() * 12) + 1);
-	    $("#userGuess").html(crystalValue2);
+	    // $("#userGuess").html(crystalValue2);
 	    console.log(crystalValue2);
-	    // numberGenerated = true;
 		});	
 
 			if (crystalValue2 == generatedNumber2){
@@ -124,11 +86,8 @@ function numberGeneration () {
 			}
 
 		$("#crystal3").on("click", function() {
-	      
-	    // var randomValue = Math.floor((Math.random() * 12) + 1);
-	    $("#userGuess").html(crystalValue3);
+	    // $("#userGuess").html(crystalValue3);
 	    console.log(crystalValue3);
-	    // numberGenerated = true;
 		});	
 
 			if (crystalValue3 == generatedNumber3){
@@ -136,55 +95,31 @@ function numberGeneration () {
 			}
 
 		$("#crystal4").on("click", function() {
-	      
-	    // var randomValue = Math.floor((Math.random() * 12) + 1);
-	    $("#userGuess").html(crystalValue4);
+	    // $("#userGuess").html(crystalValue4);
 	    console.log(crystalValue4);
 		});	
 
 			if (crystalValue4 == generatedNumber4){
 				generatedImageNumberArray.push(generatedNumber4);
 			}
-
-		// numberGenerated = true;
-
 	}
 }	
 
 
 
-
-		// if (numberGenerated == true) {
-		// 		// alert("I'm working!");
-		// 	$("#crystal1").on("click", function() {
-		// 		// userTotal = userTotal + generatedImageNumberArray[0];
-		// 		userInputArray.push(generatedImageNumberArray[0]);
-		// 		// $("#userGuess").html(userTotal);
-		// 	});
-
-		// 	$("#crystal2").on("click", function() {
-		// 		// userTotal = userTotal + generatedImageNumberArray[1];
-		// 		userInputArray.push(generatedImageNumberArray[1]);
-		// 		// $("#userGuess").html(userTotal);
-		// 	});
-
-		// 	$("#crystal3").on("click", function() {
-		// 		// userTotal = userTotal + generatedImageNumberArray[2];
-		// 		userInputArray.push(generatedImageNumberArray[2]);
-		// 		// $("#userGuess").html(userTotal);
-		// 	});
-
-		// 	$("#crystal4").on("click", function() {
-		// 		// userTotal = userTotal + generatedImageNumberArray[3];
-		// 		userInputArray.push(generatedImageNumberArray[3]);
-		// 		// $("#userGuess").html(userTotal);
-		// 	});
-
-		// $("#userTotal").html(userTotal);
+function addNumbers (){
+		if (numberGenerated == true) {
+				// alert("I'm working!");
+			$(".crystalImage").attr("onclick", function() {
+				userTotal = userTotal + generatedImageNumberArray[i];
+			});
 
 
+		$("#userTotal").html(userTotal);
 
-// }
+	}
+
+}
 
 // addNumbers();
 
@@ -215,34 +150,7 @@ function numberGeneration () {
    		
    		// console.log(userTotal);
 
-// function addNumbers() {
-// 		$("#crystal1").on("click", function() {
-// 			userTotal = userTotal + generatedImageNumberArray[0];
-// 			// $("#userGuess").html(userTotal);
-// 		});
-
-// 		$("#crystal2").on("click", function() {
-// 			userTotal = userTotal + generatedImageNumberArray[1];
-// 			// $("#userGuess").html(userTotal);
-// 		});
-
-// 		$("#crystal3").on("click", function() {
-// 			userTotal = userTotal + generatedImageNumberArray[2];
-// 			// $("#userGuess").html(userTotal);
-// 		});
-
-// 		$("#crystal4").on("click", function() {
-// 			userTotal = userTotal + generatedImageNumberArray[3];
-// 			// $("#userGuess").html(userTotal);
-// 		});
-
-// 		$("#userGuess").html(userTotal);
-
-// 		$("#userGuess").html("reached the total part");
-// }
-
-// // addNumbers();
-
+// 
 // console.log(userTotal);
 	
 
