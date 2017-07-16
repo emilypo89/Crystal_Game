@@ -123,11 +123,11 @@ var crystalValue4 = Math.floor((Math.random() * 12) + 1);
 // reset function 
 function reset () {
 	userTotal = 0;
-	var computerGuess = Math.floor((Math.random() * 120) + 1);
-	var crystalValue1 = Math.floor((Math.random() * 12) + 1);
-	var crystalValue2 = Math.floor((Math.random() * 12) + 1);
-	var crystalValue3 = Math.floor((Math.random() * 12) + 1);
-	var crystalValue4 = Math.floor((Math.random() * 12) + 1);
+	computerGuess = Math.floor((Math.random() * 120) + 1);
+	crystalValue1 = Math.floor((Math.random() * 12) + 1);
+	crystalValue2 = Math.floor((Math.random() * 12) + 1);
+	crystalValue3 = Math.floor((Math.random() * 12) + 1);
+	crystalValue4 = Math.floor((Math.random() * 12) + 1);
 }
 
 
