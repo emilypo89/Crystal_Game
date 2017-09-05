@@ -122,15 +122,36 @@ var crystalValue4 = Math.floor((Math.random() * 12) + 1);
 
 // reset function 
 function reset () {
+	console.log("reached reset function");
+	gameOver();
 	userTotal = 0;
 	computerGuess = Math.floor((Math.random() * 120) + 1);
+
+	$("#computerGuess").html(computerGuess);
+
+
 	crystalValue1 = Math.floor((Math.random() * 12) + 1);
 	crystalValue2 = Math.floor((Math.random() * 12) + 1);
 	crystalValue3 = Math.floor((Math.random() * 12) + 1);
 	crystalValue4 = Math.floor((Math.random() * 12) + 1);
+
+	console.log("new user total: " + userTotal);
+	console.log("new computer guess" + computerGuess);
 }
 
+function gameOver () {
+	if (wins == 15) {
+		alert("Game over! You won " + wins + " times!");
+		wins = 0;
+		losses = 0;
+	}
 
+	if (losses == 15) {
+		alert("Game over! You lost! Better luck next time!");
+		wins = 0;
+		losses = 0;
+	}
+}
 
  });
 
