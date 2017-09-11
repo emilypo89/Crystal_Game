@@ -14,7 +14,7 @@ The user must click on one of the four crystals to start.
 
 
 
-![crystal](./assets/images/game.png)
+![crystal](./assets/images/gameImage.png)
 
 
 ## Languages and Packages Used
